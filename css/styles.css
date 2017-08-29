@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+h2,h5,h4,h6{
+  margin:0;
+}
+body{
+  font-family: sans-serif;
+  height:100vh;
+  background:linear-gradient(135deg,rgb(243,243,243) 0%,rgb(243,243,243) 51%,rgb(79,119,192) 51%, rgb(79,119,192) 100%);
+}
+.container{
+  background:rgb(243,243,243);
+  width:1000px;
+/*   height:600px; */
+  margin:20px auto;
+  padding-bottom:40px;
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 5px 10px rgba(0,0,0,.3);
+  position:relative;
+}
+/*****************
+MAIN HEADER
+*****************/
+header{
+  background:white;
+  display:flex;
+  justify-content:space-around;
+  color:rgb(190,190,190);
+  padding:10px 0;
+  line-height:0;
+  box-shadow:0 3px 10px lightgray;
+}
+.Flex{
+  display:flex;
+  align-items:center;
+  padding:0 10px;
+}
+header .fa{
+  margin:0 10px;
+}
+#logo{
+  flex:1;
+  justify-content:center;
+  color:rgb(71,135,246);
+  font-family: 'Pacifico', cursive;
+  transform:translateX(50px);
+}
+#logo h2{
+  font-weight:inherit;
+  letter-spacing:2px;
+}
+#logo i{
+  color:rgb(190,190,190);
+  font-size:16px;
+  color:lightgray;
+  transform:rotate(90deg);
+}
+.user img{
+  width:40px;
+  margin-right: 15px;
+  border-radius:5px;
+}
+.user h4{
+  font-size:14px;
+}
+.Flex:nth-of-type(6){
+  padding:0 10px;
+  border-left:2px solid rgba(190,190,190,.3);
+}
+/*************
+USER OPTIONS
+**************/
+.options{
+  margin:30px 10px;
+  display:flex;
+  justify-content:space-between;
+}
+.totalMembers{
+  display:flex;
+  align-items:center;
+}
+.totalMembers .fa-star{
+  color:white;
+  background:rgb(71,135,246);
+  padding:10px;
+  margin-right:10px;
+  border-radius:5px;
+  box-shadow:0 3px 5px rgb(71,135,246);
+}
+.totalMembers p{
+  margin:0;
+  margin-left:2px;
+  font-size:12px;
+  letter-spacing:1.1px;
+  color:gray;
+}
+.options .buttons{
+  display:inline-flex;
+}
+/**********
+BUTTONS
+**********/
+.options .buttons button{
+  background:none;
+  border:solid 1px lightgray;
+  padding:10px 25px;
+  border-radius:3px;
+  font-size:14px;
+}
+.options .buttons button:nth-of-type(1){
+  background:white;
+  border-color:white;
+  font-weight:bold;
+  border-top-right-radius:0;
+  border-bottom-right-radius:0;
+  box-shadow:-3px 3px 10px lightgray;
+}
+.options .buttons button:nth-of-type(2){
+  border-top-left-radius:0;
+  border-bottom-left-radius:0;
+}
+/**************
+FILTER BUTTONS
+**************/
+.options .filter button{
+  border:0;
+  background:none;
+  color:lightgray;
+  padding:10px 15px;
+  font-size:20px;
+  border-radius:4px;
+}
+
+.options .filter .displayTeams{
+  display:flex;
+}
+.options .filter .displayTeams button:nth-of-type(1){
+  background:white;
+  border:0;
+}
+/************
+CARDS
+*************/
+.team {
+  padding: 20px;
+  display:flex;
+  flex-wrap:wrap;
+}
+.team a {
+  text-decoration: none;
+  color: lightgray;
+  transition: .4s;
+}
+.team a:hover {
+  color:rgb(71,135,246);
+}
+.team .card{
+  background:white;
+  height:370px;
+  width:225px;
+  border-radius: 3px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.3);
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  margin-right:15px;
+  margin-bottom:15px;
+}
+.team .card figure {
+/*   border:solid 1px red; */
+  text-align: center;
+}
+.team .card figure img{
+  width:100px;
+  margin-bottom: 15px;
+  border-radius:50%;
+  box-shadow: 0 4px 8px lightgray;
+}
+.team .card figure figcaption h4, h5 {
+  font-weight: 500;
+}
+.team .card figure figcaption h5 {
+  color: lightgray;
+  line-height: 2;
+}
+.team .card .links {
+  border-bottom: solid 1px lightgray;
+  padding-bottom:20px;
+  display: flex;
+}
+.card .links a {
+  flex: 1;
+  text-align:center;
+  font-size:18px;
+}
+.card .task {
+/*   border: solid 1px red; */
+  padding:15px 25px 0;
+  margin-bottom:0;
+  display: flex;
+  justify-content:flex-end;
+}
+.card .task div {
+  line-height:0;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+.card .task div h1 {
+  margin:10px 0 15px;
+  font-weight:500;
+}
+.card .task div p {
+  color: lightgray;
+  font-size: 14px;
+}
+.card .bottom-links {
+  border-top:solid 1px lightgray;
+  display: flex;
+  align-items:center;
+}
+.card .bottom-links a {
+  flex:1;
+  text-align:center;
+  font-size: 11px;
+  font-weight:bold;
+  padding:14px;
+  letter-spacing: 1px;
+}
+.card .bottom-links a i {
+  font-size:17px;
+  margin-right: 5px;
+}
+.card .bottom-links a:first-child {
+  border-right: solid 1px lightgray;
+}
+
+/*
+  EDIT BUTTON CLICK
+  INPUT
+*/
+.task div input {
+  border: solid 1px lightgray;
+  width: 50px;
+  margin: 0;
+  /*padding: 5px;*/
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/*
+  ADD USER BUTTON
+*/
+.add-user {
+  background:rgb(71,135,246);
+  box-shadow:0 3px 10px rgb(71,135,246);
+  border:0;
+  color:white;
+  padding:14px 16px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  bottom:20px;
+  right:25px;
+  cursor:pointer;
+}
+.add-user:hover {
+  background:rgb(71,135,230);
+}
+
+/*
+  MODAL
+*/
+#modal{
+  display:none;
+  background:rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:100%;
+  padding-top:60px;
+}
+#content{
+  padding:20px 15px;
+  width:350px;
+  background:rgb(79,119,192);
+  box-shadow:0 5px 20px rgba(0,0,0,.6);
+  margin:auto;
+  border-radius:5px;
+}
+form{
+  display:flex;
+  flex-direction:column;
+}
+form label{
+  margin-bottom:5px;
+  font-weight:bold;
+  color:white;
+}
+form input{
+  margin-bottom:15px;
+  padding:8px 5px;
+  border:0;
+}
+.form-btns {
+  display: flex;
+  align-items: baseline;
+}
+.form-btns a {
+  color: white;
+}
+form .new-user{
+  background:white;
+  color:rgb(79,119,192);
+  border:0;
+  width:150px;
+  margin-left:auto;
+  padding:10px 0;
+  cursor:pointer;
+  transition:.5s;
+}
+form .new-user:hover{
+  border-radius:20px;
+}
+.animate{
+  -webkit-animation: animatezoom 0.4s;
+    animation: animatezoom 0.4s;
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}

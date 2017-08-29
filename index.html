@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ajax crud</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <div class="container">
+  <header>
+    <div class="Flex">
+      <i class="fa fa-th-large"></i>
+      <h5>Board</h5>
+    </div>
+    <div class="Flex">
+      <i class="fa fa-search"></i>
+      <h5>Search...</h5>
+    </div>
+    <div class="Flex" id="logo">
+      <h2>Trello</h2>
+      <i class="fa fa-step-backward"></i>
+    </div>
+    <div class="Flex user">
+      <img src="https://d3iw72m71ie81c.cloudfront.net/female-18.jpg"/>
+      <h4>Hello, Anna!</h4>
+    </div>
+    <div class="Flex">
+      <i class="fa fa-bell-o"></i>
+    </div>
+    <div class="Flex">
+      <i class="fa fa-navicon"></i>
+    </div>
+  </header>
+  <div class="options Flex">
+    <div class="totalMembers">
+      <i class="fa fa-star"></i>
+      <div>
+        <h4>Team Members</h4>
+        <p>Netguru</p>
+      </div>
+    </div><!--totalMembers-->
+    <div class="buttons">
+      <button>All members</button>
+      <button>My team</button>
+    </div><!--buttons end-->
+    <div class="filter Flex">
+      <button><i class="fa fa-filter"></i></button>
+      <div class="displayTeams">
+        <button><i class="fa fa-th-large"></i></button>
+        <button><i class="fa fa-align-left"></i></button>
+      </div>
+    </div><!--filter-->
+  </div><!--options-->
+
+  <div class="team">
+
+  </div><!--team-->
+  <button class="add-user" title="Add New User">
+    <i class="fa fa-plus"></i>
+  </button>
+</div><!--container end-->
+
+<!-- TEMPLATE -->
+<template id="user-card">
+  <div class="card" data-id="{{id}}">
+    <figure>
+      {{#img}}<img src="{{img}}" />{{/img}}
+
+      {{^img}}<img src="http://style.anu.edu.au/_anu/4/images/placeholders/person.png">{{/img}}
+      <figcaption>
+        <h4>{{name}}</h4>
+      <h5>{{username}}</h5>
+      </figcaption>
+    </figure>
+  <div class="links">
+    <a href="#" class="edit-btn" title="Edit"><i class="fa fa-pencil"></i></a>
+    <a href="#"><i class="fa fa-bell-o"></i></a>
+    <a href="#" class="delete-btn" data-id="{{id}}" title="Delete"><i class="fa fa-trash-o"></i></a>
+  </div>
+  <div class="task">
+    <div>
+    {{#openTask}}<h1 id="task">{{openTask}}</h1>{{/openTask}}
+    {{^openTask}}<h1 id="task">0</h1>{{/openTask}}
+    <p>Open Task</p>
+    </div>
+  </div>
+  <div class="bottom-links">
+    <a href="#"><i class="fa fa-th-large"></i> CARDS</a>
+    <a href="#"><i class="fa fa-user-o"></i> PROFILE</a>
+  </div>
+</div>
+</template>
+
+<!--MODAL-->
+<div id="modal">
+  <div id="content" class="animate">
+      <form>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="John Doe" required/>
+        <label for="username">User Name</label>
+        <input id="username" type="text" placeholder="@jondoe" required/>
+        <div class="form-btns">
+          <a href="#" id="cancel-btn">Cancel</a>
+          <button class="new-user">Add User</button>
+        </div>
+      </form>
+  </div><!--content end-->
+</div><!--modal end-->
+
+
+    <ul id="users"></ul>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

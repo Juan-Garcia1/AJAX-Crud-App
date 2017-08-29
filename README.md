@@ -1,3 +1,3 @@
-## Crud app using AJAX
+## Crud App Using AJAX
 
-A simple crud app where you can edit a users open task and delete a user
+A simple crud app where you can edit a users open task and delete a user.
